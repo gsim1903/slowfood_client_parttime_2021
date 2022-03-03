@@ -28,9 +28,13 @@ describe("user can add more products to their order", () => {
     cy.wait("@OrderUpdate").its("request.method").should("eq", "PUT");
   });
 
-  it("is expected that the total order amount of 400", () => {
-    cy.get("[data-cy=ordersum]".should("equal", 400));
+  it("is expected that the total order quantity of 3", () => {
+    cy.get("[data-cy=order-list]").children().should("have.length", 3);
   });
+
+  // it("is expected that the total order cost is  750", () => {
+  //   cy.get("[data-cy=total-cost]".should("equal", 750));
+  // });
 
 });
   

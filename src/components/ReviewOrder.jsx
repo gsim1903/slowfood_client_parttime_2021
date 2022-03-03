@@ -13,13 +13,21 @@ const ReviewOrder = () => {
       toast.warn(response.data.message, { toastId: "message-box" });
       setOpen(false);
     } else {
-      setOrder(response.data.order);
+      setOrder(response.data.order);  
     }
   };
-
   const orderList = order.products?.map((product) => {
-    return <List.Item key={product.id}>{product.name}</List.Item>;
+    return (<List.Item key={product.id}>{product.name}</List.Item>)
+    
   });
+
+  // const OrderDetails = ({orderList}) => {
+  //   return (
+  //   <div data-cy="OrderSize">
+  //     <h1> {OrderDetails.products.length}</h1>
+  //     </div>
+  //   )
+  // }
 
   return (
     <>
@@ -39,6 +47,7 @@ const ReviewOrder = () => {
         </Modal.Content>
         <Modal.Actions>
           <Container data-cy="total-cost"> Total {order.total}kr</Container>
+          <Container data-cy="total-count"> Total {order.length}</Container>
         </Modal.Actions>
       </Modal>
       <ToastContainer data-cy="message-box" />

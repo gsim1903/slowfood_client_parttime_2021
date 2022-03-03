@@ -1,7 +1,8 @@
 {
   "order": {
     "id": 5,
-    "total": "750",
+    "total": 750,
+    "count": 3,
     "products": [{
         "id": 2,
         "name": "Halouli sticks",

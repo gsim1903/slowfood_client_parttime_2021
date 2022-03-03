@@ -38,15 +38,16 @@ const Products = () => {
       toast(response.data.message, { toastId: "message-box" });
     }
 
-    const response = await axios.get("https://reqres.in/api/orders", {
-      params: { order_id: 1, product_id: id, price: price },
-      
-      setOrderSum(response.data.products)
+  
 
-    })
+    // const response = await axios.get("https://reqres.in/api/orders", {
+    //   params: { order_id: 1, product_id: id, price: price },
+
+    // })
     
-
   };
+
+  
 
   const productList = [];
   let prevCategory = "";
