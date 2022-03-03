@@ -3,7 +3,8 @@
     "id": 5,
     "total": 750,
     "count": 3,
-    "products": [{
+    "products": [
+      {
         "id": 2,
         "name": "Halouli sticks",
         "price": 200,

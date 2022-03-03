@@ -47,7 +47,7 @@ const ReviewOrder = () => {
         </Modal.Content>
         <Modal.Actions>
           <Container data-cy="total-cost"> Total {order.total}kr</Container>
-          <Container data-cy="total-count"> Total {order.length}</Container>
+          <Container data-cy="total-count"> {order.length}</Container>
         </Modal.Actions>
       </Modal>
       <ToastContainer data-cy="message-box" />
